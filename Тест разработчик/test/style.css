@@ -1,0 +1,248 @@
+/* Обнуление отступов и границ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем обводку и стили у ссылок и кнопок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Наследование шрифта и сброс списков */
+ul, ol {
+  list-style: none;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Сброс таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* HTML5 элементы */
+article, aside, footer, header, nav, section, main {
+  display: block;
+}
+
+/* Atyp Text Regular */
+@font-face {
+  font-family: 'Atyp Text';
+  src: url(/fonts/AtypTextRegular/atyptext-regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Atyp Text SemiBold */
+@font-face {
+  font-family: 'Atyp Text';
+  src: url(/fonts/AtypTextSemiBold/atyptext-semibold.woff2) format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Atyp Text Bold */
+@font-face {
+  font-family: 'Atyp Text';
+  src: url(/fonts/AtypTextBold/atyptext-bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* BebasNeue Bold */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url(/fonts/BebasNeueBold/bebas_neue_bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.header__item {
+  display: flex;
+  padding: 20px 0;
+}
+
+.flex-spcbtw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__transperency {
+  background-image: url(images/header/header__transperency.png);*/
+  background-size: cover;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.contentBox {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.header__work-time {
+  margin-right: 105px;
+  font-family: 'Atyp Text';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.tel__number {
+  font-family: 'Atyp Text';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.callback__button {
+  font-family: 'Atyp Text';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #669933;
+}
+
+.loginButton {
+  font-family: 'Atyp Text';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.heafer__search {
+  margin-right: 130px;
+}
+
+.header__navigation {
+  position: relative;
+  padding: 30px 0;
+  background-image: url(/images/header/Nav_background.png);
+  background-size: cover;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow: visible;
+}
+
+.logoContainer {
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.logoContainer img {
+  display: block;
+  height: auto;
+}
+
+.navigation__blcok-left {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.navigation__item-left {
+  font-family: 'Atyp Text';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.navigation__item-left:not(:last-child) {
+  margin-right: 40px;
+}
+
+.navigation__blcok-right {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.navigation__item-right {
+  font-family: 'Atyp Text';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.navigation__item-right:not(:last-child) {
+  margin-right: 45px;
+}
+
+.banner {
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/banner/banner_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 176px;
+  margin-top: -176px;
+}
+
+.banner__titileblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 215px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 180px;
+  background-image: url(images/banner/banner_title_block.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.banner__subtitle {
+  margin-top: 30px;
+  font-family: 'Atyp Text';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.banner__title {
+  text-align: center;
+  font-family: 'Bebas Neue';
+  font-size: 60px;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  width: 595px;
+}
+
+.banner__optionblock {
+  display: flex;
+  
+}
+
+
