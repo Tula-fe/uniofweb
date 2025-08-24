@@ -1,5 +1,7 @@
 /* Обнуление отступов и границ */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,10 +27,12 @@ ul, ol {
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1;
   font-family: sans-serif;
   background-color: #fff;
   color: #000;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Сброс таблиц */
@@ -68,7 +72,7 @@ article, aside, footer, header, nav, section, main {
 
 /* BebasNeue Bold */
 @font-face {
-  font-family: 'Bebas Neue';
+  font-family: 'BebasNeue';
   src: url(/fonts/BebasNeueBold/bebas_neue_bold.woff2) format('woff2');
   font-weight: 700;
   font-style: normal;
@@ -76,6 +80,7 @@ article, aside, footer, header, nav, section, main {
 
 .uppercase {
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .header__item {
@@ -90,11 +95,7 @@ article, aside, footer, header, nav, section, main {
 }
 
 .header__transperency {
-  background-image: url(images/header/header__transperency.png);*/
-  background-size: cover;
-  background-position: 100%;
-  background-repeat: no-repeat;
-  width: 100%;
+  background-image: url(images/header/header__transperency.png);
 }
 
 .contentBox {
@@ -198,12 +199,12 @@ article, aside, footer, header, nav, section, main {
 }
 
 .banner {
+  position: relative;
   z-index: -2;
   display: flex;
   flex-direction: column;
   background-image: url(/images/banner/banner_background.png);
   background-repeat: no-repeat;
-  background-size: cover;
   padding-top: 176px;
   margin-top: -176px;
 }
@@ -212,7 +213,7 @@ article, aside, footer, header, nav, section, main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 215px;
+  margin-top: 185px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 180px;
@@ -223,26 +224,241 @@ article, aside, footer, header, nav, section, main {
 
 .banner__subtitle {
   margin-top: 30px;
+  margin-bottom: 20px;
   font-family: 'Atyp Text';
   font-weight: 700;
   font-style: normal;
   font-size: 22px;
-  color: #ffffff;
+  color: #ffcccc;
+  letter-spacing: 1.144px;
 }
 
 .banner__title {
   text-align: center;
   font-family: 'Bebas Neue';
   font-size: 60px;
-  font-weight: 700;
-  font-style: normal;
   color: #ffffff;
-  width: 595px;
+  width: 650px;
+  letter-spacing: 3.6px;
 }
 
 .banner__optionblock {
   display: flex;
-  
+}
+
+.option__block {
+  flex: 1;
+  display: flex;
+}
+
+.option__descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.option__img {
+  margin: 48px 40px
+}
+
+.option__subtitle {
+  font-family: 'Atyp Text';
+  font-weight: 600;
+  font-style: normal;
+  color: #cc9966;
+  font-size: 18px;
+}
+
+.option__title {
+  font-family: 'Atyp Text';
+  font-weight: 600;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.option_nonselect {
+  background-image: url(/images/banner/Фон1.png);
+  background-repeat: no-repeat;
+}
+
+.option_select {
+  background-image: url(/images/banner/Фон2.png);
+  background-repeat: no-repeat;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 3px solid #cc9966;
+}
+
+.companydescr {
+  display: flex;
 }
 
 
+
+.companydescr__leftblock {
+  flex: 0 0 50%;
+  padding-left: 260px;
+  padding-right: 90px;
+  background-image: url(images/homedescr/homeDescrTitleImage.png);
+  background-repeat: no-repeat;
+}
+
+.companydescr__rightblock {
+  flex: 0 0 50%;
+  padding-right: 260px;
+  padding-left: 90px;
+  background-color: #ffcccc;
+
+}
+
+.companydescr__title {
+  margin-top: 130px;
+  margin-bottom: 90px;
+  font-family: 'Bebas Neue';
+  font-size: 80px;
+  color: #339933;
+}
+
+.companydescr__subtitle {
+  margin-bottom: 90px;
+  font-family: 'Bebas Neue';
+  font-size: 64px;
+}
+
+.companydescr__descr-bold {
+  padding-top: 130px;
+  margin-bottom: 80px;
+  font-family: 'Atyp Text Semibold';
+  font-size: 19px;
+}
+
+.companydescr__descr {
+  font-family: 'Atyp Text';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.services__siege {
+  display: flex;
+}
+
+.siege__img {
+  flex: 0 0 50%;
+  
+}
+
+.siege__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.siege__descr {
+  flex: 0 0 50%;
+}
+
+.siege__title {
+  display: inline-block;
+  padding: 15px 90px;
+  margin-top: 65px;
+  margin-bottom: 45px;
+  font-family: 'Bebas Neue';
+  font-size: 35px;
+  color: #ffffff;
+  background-color: #339933;
+}
+
+.siege__text {
+  padding-left: 90px;
+  margin-right: 260px;
+  font-family: 'Atyp Text'; /* regular */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.siege__text :not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.services__windows {
+  display: flex;
+}
+
+.windows__descr {
+  flex: 0 0 50%;
+}
+
+.windows__img {
+  flex: 0 0 50%;
+}
+
+.windows__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.windows__title {
+  display: inline-block;
+  margin-top: 65px;
+  margin-left: 260px;
+  margin-bottom: 40px;
+  padding: 15px 90px;
+  font-family: 'Bebas Neue';
+  font-size: 35px;
+  color: #ffffff;
+  background-color: #cc9966;
+}
+
+.windows__text {
+  margin-left: 260px;
+  margin-right: 90px;
+  font-family: 'Atyp Text'; /*regular*/
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.services__painting {
+  display: flex;
+}
+
+.painting__img {
+  flex: 0 0 50%;
+}
+
+.painting__descr {
+  flex: 0 0 50%;
+}
+
+.painting__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.painting__title {
+  display: inline-block;
+  padding: 15px 90px;
+  margin-top: 65px;
+  margin-bottom: 45px;
+  font-family: 'Bebas Neue';
+  font-size: 35px;
+  color: #ffffff;
+  background-color: #339933;
+}
+
+.painting__text {
+  padding-left: 90px;
+  margin-right: 260px;
+  font-family: 'Atyp Text'; /* regular */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+}
