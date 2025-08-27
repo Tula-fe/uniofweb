@@ -540,3 +540,119 @@ article, aside, footer, header, nav, section, main {
   color: #666666;
 }
 
+.news {
+  margin-bottom: 100px;
+}
+
+.news__wrapper {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.news__wrapper-title {
+  flex-direction: column;
+  align-items: center;
+}
+
+.news__wrapper-items {
+  gap: 50px;
+}
+
+.news__title {
+  margin-bottom: 25px;
+  padding: 0 120px;
+  font-family: 'Bebas Neue';
+  font-size: 64px;
+  background-image: url(images/news/news_title_background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.news__alllink {
+  margin-bottom: 25px;
+  padding-bottom: 5px;
+  font-family: 'Atyp Text'; /* bold */
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: #339933;
+  border-bottom: 1px dashed #339933;
+}
+
+.news__cover {
+  margin-bottom: 27px;
+}
+
+.news__date {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -78px;
+  width: 60px;
+  height: 90px;
+  text-align: center;
+  font-family: 'Atyp Text'; /* semibold */
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #339933;
+}
+
+.news__heading {
+  margin-bottom: 20px;
+  font-family: 'Bebas Neue';
+  font-size: 30px;
+}
+
+.news__prev {
+  max-width: 400px;
+  font-family: 'Atyp Text'; /* regular */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer__logo {
+  position: absolute;
+  padding: 20px;
+  transform: translate(15px, -25px);
+  background-color: #1e1e1e;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1400px) minmax(0, 260px);
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #1e1e1e;
+}
+
+.footer__nav {
+  display: flex;
+}
+
+.footer__menu {
+  display: flex;
+  margin-right: 90px;
+  padding-left: 20px;
+  font-family: 'Atyp Text';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer__menu :not(:last-child) {
+  margin-right: 50px;
+}
+
+.footer__social :not(:last-child) {
+  margin-right: 20px;
+}
