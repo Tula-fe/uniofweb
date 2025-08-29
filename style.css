@@ -48,7 +48,7 @@ article, aside, footer, header, nav, section, main {
 
 /* Atyp Text Regular */
 @font-face {
-  font-family: 'Atyp Text';
+  font-family: 'Atyp Text Regular';
   src: url(/fonts/AtypTextRegular/atyptext-regular.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
@@ -56,7 +56,7 @@ article, aside, footer, header, nav, section, main {
 
 /* Atyp Text SemiBold */
 @font-face {
-  font-family: 'Atyp Text';
+  font-family: 'Atyp Text SemiBold';
   src: url(/fonts/AtypTextSemiBold/atyptext-semibold.woff2) format('woff2');
   font-weight: 600;
   font-style: normal;
@@ -64,7 +64,7 @@ article, aside, footer, header, nav, section, main {
 
 /* Atyp Text Bold */
 @font-face {
-  font-family: 'Atyp Text';
+  font-family: 'Atyp Text Bold';
   src: url(/fonts/AtypTextBold/atyptext-bold.woff2) format('woff2');
   font-weight: 700;
   font-style: normal;
@@ -95,7 +95,8 @@ article, aside, footer, header, nav, section, main {
 }
 
 .header__transperency {
-  background-image: url(images/header/header__transperency.png);
+  /*background-image: url(images/header/header__transperency.png);*/
+  background-color: #1e1e1e99;
 }
 
 .contentBox {
@@ -105,45 +106,85 @@ article, aside, footer, header, nav, section, main {
 
 .header__work-time {
   margin-right: 105px;
-  font-family: 'Atyp Text';
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 14px;
   color: #ffffff;
 }
 
 .tel__number {
-  font-family: 'Atyp Text';
-  font-weight: 600;
-  font-style: normal;
+  font-family: 'Atyp Text SemiBold';
   font-size: 20px;
   color: #ffffff;
 }
 
 .callback__button {
-  font-family: 'Atyp Text';
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 14px;
   color: #669933;
 }
 
-.loginButton {
-  font-family: 'Atyp Text';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  color: #ffffff;
+.header__item-search {
+  align-items: center;
 }
 
-.heafer__search {
+.login__btn {
+  padding-left: 2px;
+  padding-right: 55px;
+  height: 40px;
+  font-family: 'Atyp Text Regular';
+  font-size: 14px;
+  color: #ffffff;
+  background-image: url(images/header/login_icon.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right center;
+}
+
+.login__btn:focus {
+  outline: 1px solid #ffffff55;
+}
+
+.header__search {
   margin-right: 130px;
+  width: 280px;
+  height: 40px;
+  background-image: url(images/header/search_input.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.search__input {
+  margin-left: 10px;
+  width: 260px;
+  height: 40px;
+  border: none;
+  /*outline: 1px solid white;*/
+  box-shadow: none;
+  background-color: transparent;
+  color: #ffffff;
+  background-image: url(images/header/search_icon.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right center;
+}
+
+.search__input::placeholder {
+  font-family: 'Atyp Text Regular';
+  font-size: 14px;
+  color: #ffffff;
+  height: auto;
+}
+
+.search__input:focus {
+  outline: none;
+  background-image: none;
 }
 
 .header__navigation {
   position: relative;
   padding: 30px 0;
-  background-image: url(/images/header/Nav_background.png);
+  /*background-image: url(/images/header/Nav_background.png);*/
+  background-color: #1e1e1e;
   background-size: cover;
   background-position: 100%;
   background-repeat: no-repeat;
@@ -170,9 +211,7 @@ article, aside, footer, header, nav, section, main {
 }
 
 .navigation__item-left {
-  font-family: 'Atyp Text';
-  font-weight: 600;
-  font-style: normal;
+  font-family: 'Atyp Text SemiBold';
   font-size: 14px;
   color: #ffffff;
 }
@@ -187,9 +226,7 @@ article, aside, footer, header, nav, section, main {
 }
 
 .navigation__item-right {
-  font-family: 'Atyp Text';
-  font-weight: 600;
-  font-style: normal;
+  font-family: 'Atyp Text SemiBold';
   font-size: 14px;
   color: #ffffff;
 }
@@ -225,9 +262,7 @@ article, aside, footer, header, nav, section, main {
 .banner__subtitle {
   margin-top: 30px;
   margin-bottom: 20px;
-  font-family: 'Atyp Text';
-  font-weight: 700;
-  font-style: normal;
+  font-family: 'Atyp Text Bold';
   font-size: 22px;
   color: #ffcccc;
   letter-spacing: 1.144px;
@@ -262,17 +297,13 @@ article, aside, footer, header, nav, section, main {
 }
 
 .option__subtitle {
-  font-family: 'Atyp Text';
-  font-weight: 600;
-  font-style: normal;
+  font-family: 'Atyp Text SemiBold';
   color: #cc9966;
   font-size: 18px;
 }
 
 .option__title {
-  font-family: 'Atyp Text';
-  font-weight: 600;
-  font-style: normal;
+  font-family: 'Atyp Text SemiBold';
   color: #ffffff;
   font-size: 32px;
 }
@@ -287,7 +318,6 @@ article, aside, footer, header, nav, section, main {
   background-repeat: no-repeat;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  border-top: 3px solid #cc9966;
 }
 
 .companydescr {
@@ -331,12 +361,11 @@ article, aside, footer, header, nav, section, main {
   margin-bottom: 80px;
   font-family: 'Atyp Text Semibold';
   font-size: 19px;
+  line-height: 1.5;
 }
 
 .companydescr__descr {
-  font-family: 'Atyp Text';
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 20px;
 }
 
@@ -377,9 +406,7 @@ article, aside, footer, header, nav, section, main {
 .siege__text {
   padding-left: 90px;
   margin-right: 260px;
-  font-family: 'Atyp Text'; /* regular */
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 18px;
   line-height: 1.5;
 }
@@ -421,9 +448,7 @@ article, aside, footer, header, nav, section, main {
 .windows__text {
   margin-left: 260px;
   margin-right: 90px;
-  font-family: 'Atyp Text'; /*regular*/
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 18px;
   line-height: 1.5;
 }
@@ -460,9 +485,7 @@ article, aside, footer, header, nav, section, main {
 .painting__text {
   padding-left: 90px;
   margin-right: 260px;
-  font-family: 'Atyp Text'; /* regular */
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 18px;
   line-height: 1.5;
 }
@@ -498,9 +521,7 @@ article, aside, footer, header, nav, section, main {
 .partners__alllink {
   margin-bottom: 25px;
   padding-bottom: 5px;
-  font-family: 'Atyp Text'; /* bold */
-  font-weight: 700;
-  font-style: normal;
+  font-family: 'Atyp Text Bold';
   font-size: 18px;
   color: #339933;
   border-bottom: 1px dashed #339933;
@@ -533,20 +554,20 @@ article, aside, footer, header, nav, section, main {
   text-align: center;
   padding: 20px 0;
   border-top: 1px solid #e6e6e6;
-  font-family: 'Atyp Text'; /* regular */
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 12px;
   color: #666666;
 }
 
 .news {
   margin-bottom: 100px;
+  background-image: url(images/news/news_background.jpg);
+  background-repeat: no-repeat;
 }
 
 .news__wrapper {
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 15px;
 }
 
 .news__wrapper-title {
@@ -561,6 +582,7 @@ article, aside, footer, header, nav, section, main {
 .news__title {
   margin-bottom: 25px;
   padding: 0 120px;
+  padding-top: 90px;
   font-family: 'Bebas Neue';
   font-size: 64px;
   background-image: url(images/news/news_title_background.png);
@@ -569,11 +591,8 @@ article, aside, footer, header, nav, section, main {
 }
 
 .news__alllink {
-  margin-bottom: 25px;
   padding-bottom: 5px;
-  font-family: 'Atyp Text'; /* bold */
-  font-weight: 700;
-  font-style: normal;
+  font-family: 'Atyp Text Bold';
   font-size: 18px;
   color: #339933;
   border-bottom: 1px dashed #339933;
@@ -593,9 +612,7 @@ article, aside, footer, header, nav, section, main {
   width: 60px;
   height: 90px;
   text-align: center;
-  font-family: 'Atyp Text'; /* semibold */
-  font-weight: 600;
-  font-style: normal;
+  font-family: 'Atyp Text SemiBold';
   font-size: 18px;
   color: #ffffff;
   background-color: #339933;
@@ -609,9 +626,7 @@ article, aside, footer, header, nav, section, main {
 
 .news__prev {
   max-width: 400px;
-  font-family: 'Atyp Text'; /* regular */
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Atyp Text Regular';
   font-size: 18px;
 }
 
@@ -642,9 +657,7 @@ article, aside, footer, header, nav, section, main {
   display: flex;
   margin-right: 90px;
   padding-left: 20px;
-  font-family: 'Atyp Text';
-  font-weight: 600;
-  font-style: normal;
+  font-family: 'Atyp Text SemiBold';
   font-size: 14px;
   color: #ffffff;
 }
