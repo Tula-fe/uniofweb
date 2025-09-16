@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon-32x32.png">
     <title>Euro Obsada</title>
+    <script src="js/partners_slider.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -129,33 +131,47 @@
         </div>
         <div class="partners contentBox">
             <div class="partners__wrapper partners__wrapper-title">
-                <div class="partners__title uppercase">
-                    наши партнеры
-                </div>
-                <div class="partners__alllink uppercase">
-                    смотреть все
-                </div>
+                <div class="partners__title uppercase">наши партнеры</div>
+                <button class="partners__allBtn uppercase" id="partners_allBtn">смотреть все</button>
             </div>
-            <div class="partners__wrapper partners__wrapper-items">
-                <div class="partners__item">
-                    <div class="partners__img"><img src="images/partners/illbruck_unselected.svg" alt="Illbruck"></div>
-                    <div class="partners__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+            <div class="partners__wrapper partners__wrapper-items" id="partners_sliderContainer">
+                <div class="partners__sliderTrack" id="partners_sliderTrack">
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img"><img src="images/partners/illbruck_unselected.svg" alt="Illbruck"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img"><img src="images/partners/veka_unselected.svg" alt="Veka"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img rehau"><img src="images/partners/rehau_unselected.svg" alt="Rehau"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img"><img src="images/partners/remmers_unselected.svg" alt="Remmers"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img"><img src="images/partners/illbruck_unselected.svg" alt="Illbruck"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img"><img src="images/partners/veka_unselected.svg" alt="Veka"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img rehau"><img src="images/partners/rehau_unselected.svg" alt="Rehau"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
+                    <div class="partners__item" id="partners_slide">
+                        <div class="partners__img"><img src="images/partners/remmers_unselected.svg" alt="Remmers"></div>
+                        <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
+                    </div>
                 </div>
-                <div class="partners__item">
-                    <div class="partners__img"><img src="images/partners/veka_unselected.svg" alt="Veka"></div>
-                    <div class="partners__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+                <div class="partners__sliderScrollbar" id="partners_sliderScrollbar">
+                    <div class="partners__sliderThumb" id="partners_sliderThumb"></div>
                 </div>
-                <div class="partners__item">
-                    <div class="partners__img"><img src="images/partners/rehau_unselected.svg" alt="Rehau"></div>
-                    <div class="partners__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-                </div>
-                <div class="partners__item">
-                    <div class="partners__img partners__img-remmers"><img src="images/partners/remmers_unselected.svg" alt="Remmers"></div>
-                    <div class="partners__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-                </div>
-            </div>
-            <div class="partners__buttomborder">
-                    <img src="images/partners/partners_border_bottom.png" alt="">
             </div>
         </div>
         <div class="news">
