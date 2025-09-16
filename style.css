@@ -625,18 +625,11 @@ article, aside, footer, header, nav, section, main {
   background-repeat: no-repeat;
 }
 
-.news__wrapper {
-  display: flex;
-  margin-bottom: 15px;
-}
-
 .news__wrapper-title {
+  margin-bottom: 15px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.news__wrapper-items {
-  gap: 50px;
 }
 
 .news__title {
@@ -650,7 +643,7 @@ article, aside, footer, header, nav, section, main {
   background-position: center;
 }
 
-.news__alllink {
+.news__allbtn {
   padding-bottom: 5px;
   font-family: 'Atyp Text Bold';
   font-size: 18px;
@@ -658,8 +651,65 @@ article, aside, footer, header, nav, section, main {
   border-bottom: 1px dashed #339933;
 }
 
+.news__wrapper {
+  margin-bottom: 15px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.news__sliderTrack {
+  min-height: 600px;
+  display: flex;
+  gap: 45px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* скрыть стандартный скролл Firefox */
+  scroll-snap-type: x mandatory;
+}
+
+.news__sliderTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.news__sliderTrack.expanded {
+  flex-wrap: wrap;
+  overflow-x: visible;
+}
+
+.news__item {
+  flex: 0 0 435px;
+  scroll-snap-align: start;
+}
+
 .news__cover {
+  position: relative;
   margin-bottom: 27px;
+}
+
+.news__details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 25px 30px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.news__item:hover .news__img img {
+  filter: brightness(70%); /* затемнение до 70% яркости */
+}
+
+.news__item:hover .news__details {
+  opacity: 1;
+  pointer-events: auto; /* теперь кнопка кликабельна */
 }
 
 .news__date {
@@ -689,6 +739,27 @@ article, aside, footer, header, nav, section, main {
   font-family: 'Atyp Text Regular';
   font-size: 18px;
 }
+
+.news__sliderScrollbar {
+  margin-top: 65px;
+  height: 2px;
+  background: #e6e6e6;
+  border-radius: 3px;
+  position: relative;
+}
+
+.news__sliderThumb {
+  height: 100%;
+  background: #339933;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  cursor: default;
+}
+
+/**************************************/
 
 .footer {
   display: flex;

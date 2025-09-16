@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon-32x32.png">
     <title>Euro Obsada</title>
-    <script src="js/partners_slider.js" defer></script>
+    <script src="js/partners_slider.js" type="module" defer></script>
+    <script src="js/news_slider.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
@@ -136,35 +137,35 @@
             </div>
             <div class="partners__wrapper partners__wrapper-items" id="partners_sliderContainer">
                 <div class="partners__sliderTrack" id="partners_sliderTrack">
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img"><img src="images/partners/illbruck_unselected.svg" alt="Illbruck"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img"><img src="images/partners/veka_unselected.svg" alt="Veka"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img rehau"><img src="images/partners/rehau_unselected.svg" alt="Rehau"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img"><img src="images/partners/remmers_unselected.svg" alt="Remmers"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img"><img src="images/partners/illbruck_unselected.svg" alt="Illbruck"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img"><img src="images/partners/veka_unselected.svg" alt="Veka"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img rehau"><img src="images/partners/rehau_unselected.svg" alt="Rehau"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
-                    <div class="partners__item" id="partners_slide">
+                    <div class="partners__item">
                         <div class="partners__img"><img src="images/partners/remmers_unselected.svg" alt="Remmers"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
@@ -175,61 +176,111 @@
             </div>
         </div>
         <div class="news">
-            <div class="news__wrapper news__wrapper-title">
+            <div class="news__wrapper-title">
                 <div class="news__title uppercase">
                     новости
                 </div>
-                <div class="news__alllink uppercase">
+                <button class="news__allbtn uppercase" id="news_allBtn">
                     смотреть все
-                </div>
+                </button>
             </div>
             <div class="contentBox">
-                <div class="news__wrapper news__wrapper-items">
-                    <div class="news__item">
-                        <div class="news__cover">
-                            <div class="news__img"><img src="images/news/Браширование.png" alt="Браширование"></div>
-                            <div class="news__date">
-                                <p>23</p>
-                                <p>04</p>
-                                <p>2004</p>
+                <div class="news__wrapper" id="partners_sliderContainer">
+                    <div class="news__sliderTrack" id="news_sliderTrack">
+                        <div class="news__item">
+                            <div class="news__cover">
+                                <button class="news__details uppercase">подробнее</button>
+                                <div class="news__img"><img src="images/news/Браширование.png" alt="Браширование"></div>
+                                <div class="news__date">
+                                    <p>23</p>
+                                    <p>04</p>
+                                    <p>2004</p>
+                                </div>
+                            </div>
+                            <div class="news__descr">
+                                <div class="news__heading uppercase">браширование</div>
+                                <div class="news__prev">Браширование-технологический прием обработки древесины при котором строганную поверхность обрабатывают...</div>
                             </div>
                         </div>
-                        <div class="news__descr">
-                            <div class="news__heading uppercase">браширование</div>
-                            <div class="news__prev">Браширование-технологический прием обработки древесины при котором строганную поверхность обрабатывают...</div>
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <div class="news__cover">
-                            <div class="news__img"><img src="images/news/Melke.png" alt="Новая оконная система Melke"></div>
-                            <div class="news__date">
-                                <p>12</p>
-                                <p>02</p>
-                                <p>2004</p>
+                        <div class="news__item">
+                            <div class="news__cover">
+                                <button class="news__details uppercase">подробнее</button>
+                                <div class="news__img"><img src="images/news/Melke.png" alt="Новая оконная система Melke"></div>
+                                <div class="news__date">
+                                    <p>12</p>
+                                    <p>02</p>
+                                    <p>2004</p>
+                                </div>
+                            </div>
+                            <div class="news__descr">
+                                <div class="news__heading uppercase">новая оконная система melke</div>
+                                <div class="news__prev">Иновационный оконный ПВХ профиль Melke - стандарт высочайшего качества! ... Уплотнение MELKE выполнено из лучшего…</div>
                             </div>
                         </div>
-                        <div class="news__descr">
-                            <div class="news__heading uppercase">новая оконная система melke</div>
-                            <div class="news__prev">Иновационный оконный ПВХ профиль Melke - стандарт высочайшего качества! ... Уплотнение MELKE выполнено из лучшего…</div>
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <div class="news__cover">
-                            <div class="news__img"><img src="images/news/ИзСосны.png" alt="Производство обсады из сосны"></div>
-                            <div class="news__date">
-                                <p>12</p>
-                                <p>02</p>
-                                <p>2004</p>
+                        <div class="news__item">
+                            <div class="news__cover">
+                                <button class="news__details uppercase">подробнее</button>
+                                <div class="news__img"><img src="images/news/ИзСосны.png" alt="Производство обсады из сосны"></div>
+                                <div class="news__date">
+                                    <p>12</p>
+                                    <p>02</p>
+                                    <p>2004</p>
+                                </div>
+                            </div>
+                            <div class="news__descr">
+                                <div class="news__heading uppercase">производство обсады из сосны</div>
+                                <div class="news__prev">Наша компания наладила производство обсадных коробок из сосны. Они изготовляются из отборной древесины,…</div>
                             </div>
                         </div>
-                        <div class="news__descr">
-                            <div class="news__heading uppercase">производство обсады из сосны</div>
-                            <div class="news__prev">Наша компания наладила производство обсадных коробок из сосны. Они изготовляются из отборной древесины,…</div>
+                        <div class="news__item">
+                            <div class="news__cover">
+                                <button class="news__details uppercase">подробнее</button>
+                                <div class="news__img"><img src="images/news/Браширование.png" alt="Браширование"></div>
+                                <div class="news__date">
+                                    <p>23</p>
+                                    <p>04</p>
+                                    <p>2004</p>
+                                </div>
+                            </div>
+                            <div class="news__descr">
+                                <div class="news__heading uppercase">браширование</div>
+                                <div class="news__prev">Браширование-технологический прием обработки древесины при котором строганную поверхность обрабатывают...</div>
+                            </div>
+                        </div>
+                        <div class="news__item">
+                            <div class="news__cover">
+                                <button class="news__details uppercase">подробнее</button>
+                                <div class="news__img"><img src="images/news/Melke.png" alt="Новая оконная система Melke"></div>
+                                <div class="news__date">
+                                    <p>12</p>
+                                    <p>02</p>
+                                    <p>2004</p>
+                                </div>
+                            </div>
+                            <div class="news__descr">
+                                <div class="news__heading uppercase">новая оконная система melke</div>
+                                <div class="news__prev">Иновационный оконный ПВХ профиль Melke - стандарт высочайшего качества! ... Уплотнение MELKE выполнено из лучшего…</div>
+                            </div>
+                        </div>
+                        <div class="news__item">
+                            <div class="news__cover">
+                                <button class="news__details uppercase">подробнее</button>
+                                <div class="news__img"><img src="images/news/ИзСосны.png" alt="Производство обсады из сосны"></div>
+                                <div class="news__date">
+                                    <p>12</p>
+                                    <p>02</p>
+                                    <p>2004</p>
+                                </div>
+                            </div>
+                            <div class="news__descr">
+                                <div class="news__heading uppercase">производство обсады из сосны</div>
+                                <div class="news__prev">Наша компания наладила производство обсадных коробок из сосны. Они изготовляются из отборной древесины,…</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="news__buttomborder">
-                    <img src="images/news/news_border_bottom.png" alt="">
+                <div class="news__sliderScrollbar" id="news_sliderScrollbar">
+                    <div class="news__sliderThumb" id="news_sliderThumb"></div>
                 </div>
             </div>
         </div>
