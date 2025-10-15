@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <title>Euro Obsada</title>
+    <script src="js/partners_slider.js" type="module" defer></script>
+    <script src="js/news_slider.js" type="module" defer></script>
+    <script src="js/callback_form.js" type="module" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__transperency">
+            <div class="contentBox flex-spcbtw">
+                <div class="header__item">
+                    <div class="header__work-time">
+                        <span>Пн-Пт: с 10.00 до 18:00</span><br />
+                        <span>Сб-Вс: Дежурный режим</span>
+                    </div>
+                    <div class="header__tel">
+                        <span class="tel__number">8 (495) 640-24-86</span><br />
+                        <button class="callback__button" id="openModal">Обратный звонок</button>
+                    </div>
+                </div>
+                <div class="header__item header__item-search">
+                    <div class="header__search">
+                        <input class="search__input" type="text" placeholder="Поиск...">
+                    </div>
+                    <div class="login">
+                        <button class="login__btn">Вход</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__navigation">
+            <div class="contentBox navigation__blcok">
+                <ul class="navigation__items">
+                    <li class="navigation__item">о компании</li>
+                    <li class="navigation__item">продукция</li>
+                    <li class="navigation__item">Сотрудничество</li>
+                    <li class="navigation__item">Услуги</li>
+                    <li class="logo-placeholder"></li>
+                    <li class="navigation__item">наши работы</li>
+                    <li class="navigation__item">производство</li>
+                    <li class="navigation__item">Обсада</li>
+                    <li class="navigation__item">Контакты</li>
+                </ul>
+            </div>
+            <div class="logoContainer">
+               <img src="/images/header/logo.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+    <div class="catalog">
+        <div class="breadcrump contentBox">Хлебные крошки</div>
+        <div class="catalog__title contentBox">
+            <h2>каталог</h2>
+            <img src="images/catalog/header_background.png" alt="">
+        </div>
+        <div class="catalog_block">
+            <div class="catalog__filters">
+                <div class="filters__block">
+                    <label for="" class="uppercase">цена:</label>
+                    <div class="price__filter">
+                        <div class="input__wrapper-price">
+                            <input type="text" placeholder="">
+                            <span class="fakePlaceholder">от</span>
+                        </div>
+                        <div class="input__wrapper-price">
+                            <input type="text" placeholder="">
+                            <span class="fakePlaceholder">до</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters__block">
+                    <label for="" class="uppercase">вид обсады:</label>
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Т-образная</span>
+                    </div>
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>П-образная</span>
+                    </div>                    
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Черная</span>
+                    </div>                    
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Арочная</span>
+                    </div>                    
+                </div>
+                <div class="filters__block">
+                    <label for="" class="uppercase">для домов:</label>
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Из оцилиндрованного бревна</span>
+                    </div>                    
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Из рубленного бревна</span>
+                    </div>                    
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Из бруса</span>
+                    </div>                    
+                </div>
+                <div class="filters__block">
+                    <label for="" class="uppercase">тип обсады:</label>
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Из массива сосны</span>
+                    </div>                    
+                    <div class="filter__checkbox">
+                        <input type="checkbox">
+                        <span>Клееная обсада</span>
+                    </div>                    
+                </div>
+                <div class="filtres__buttons">
+                    <button class="buttons__apply uppercase">применить</button>
+                    <button class="buttons__cancel"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L20 20M20 2L2 20" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/></svg></button>
+                </div>
+            </div>
+            <div class="catalog__items">
+                <div class="catalog__sort">
+                    <div class="sort__price">
+                        <span class="uppercase">Сортировать по:</span>
+                        <select class="uppercase" name="price" id="price">
+                            <option value="min-max">цене: от низкой к высокой</option>
+                            <option value="max-min">цене: от высокой к низкой</option>
+                        </select>
+                    </div>
+                    <div class="sort__quantity">
+                        <span class="uppercase">Показать:</span>
+                        <select name="quantity" id="quantity">
+                            <option value="6">6</option>
+                            <option value="12">12</option>
+                            <option value="24">24</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="catalog__list">
+                    <li class="catalog__prduct">
+                        <img class="product__hit" src="images/catalog/хит.png" alt="">
+                        <div class="product__descr">
+                            <img src="images/catalog/обсада1.png" alt="">
+                            <span>Чистовая Т - образная обсада 65 мм (стойка)</span>
+                        </div>
+                        <div class="product__price">637 руб</div>
+                    </li>
+                    <li class="catalog__prduct">
+                        <img class="product__hit" src="images/catalog/хит.png" alt="">
+                        <div class="product__descr">
+                            <img src="images/catalog/обсада2.png" alt="">
+                            <span>Т - образная обсада 65 мм (стойка)</span>
+                        </div>
+                        <div class="product__price">637 руб</div>
+                    </li>
+                    <li class="catalog__prduct">
+                        <img class="product__hit" src="images/catalog/хит.png" alt="">
+                        <div class="product__descr">
+                            <img src="images/catalog/обсада3.png" alt="">
+                            <span>чистовая обсада 65 мм (вершник)</span>
+                        </div>
+                        <div class="product__price">637 руб</div>
+                    </li>
+                    <li class="catalog__prduct">
+                        <img class="product__hit" src="images/catalog/хит.png" alt="">
+                        <div class="product__descr">
+                            <img src="images/catalog/обсада1.png" alt="">
+                            <span>Чистовая Т - образная обсада 65 мм (стойка)</span>
+                        </div>
+                        <div class="product__price">637 руб</div>
+                    </li>
+                    <li class="catalog__prduct">
+                        <img class="product__hit" src="images/catalog/хит.png" alt="">
+                        <div class="product__descr">
+                            <img src="images/catalog/обсада2.png" alt="">
+                            <span>Т - образная обсада 65 мм (стойка)</span>
+                        </div>
+                        <div class="product__price">637 руб</div>
+                    </li>
+                    <li class="catalog__prduct">
+                        <img class="product__hit" src="images/catalog/хит.png" alt="">
+                        <div class="product__descr">
+                            <img src="images/catalog/обсада3.png" alt="">
+                            <span>чистовая обсада 65 мм (вершник)</span>
+                        </div>
+                        <div class="product__price">637 руб</div>
+                    </li>
+                </ul>
+                <div class="painator">
+                    Пагинация
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="descr contentBox">
+        <div class="descr__wrapper">
+            <h3 class="descr__title uppercase">ОСОБЕННОСТИ Т-ОБРАЗНОЙ ОБСАДЫ</h3>
+            <p class="descr__text">Вариант Т-образной обсады появился не так давно, инициатором такого способа установки обсадной коробкиявляются заводы производители "сборных домов"из бруса или бревна. Дело в том, что на производстве проще и экономическивыгоднее выбирать паз (выемку) в стенах, нежели формировать шип (выступ). Технология Т-образной обсады производиться припомощи специально изготовленного клееного бруса, в зависимости от толщины стен, толщина бруса может варьироваться от 65 мм до140 мм и шириной от 100 до 500 мм. В стойках обсадной коробки на производстве делается  паз глубиной 1,5-2 см и в неговклеивается брусок 40х50 мм,  выступающий на  30 мм, таким образом в сечении такая деталь обсады имеет форму схожую с буквой" Т ".</p>
+        </div>
+        <div class="decr__images">
+        <img src="images/catalog/пример1.png" alt="">
+        <img src="images/catalog/пример2.png" alt="">
+        <img src="images/catalog/пример3.png" alt="">
+        </div>
+    </div>
+
+    </main>    
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <img src="images/footer/footer_logo.svg" alt="">
+        </div>
+        <div class="footer__wrapper">
+            <div class="footer__logo-placeholder"></div>
+            <div class="footer__nav">
+                <ul class="footer__menu uppercase">
+                    <li class="footer__menu-item">о компании</li>
+                    <li class="footer__menu-item">продукция</li>
+                    <li class="footer__menu-item">наши работы</li>
+                    <li class="footer__menu-item">услуги</li>
+                    <li class="footer__menu-item">производство</li>
+                    <li class="footer__menu-item">сотрудничество</li>
+                    <li class="footer__menu-item">обсада</li>
+                </ul>
+                <div class="footer__contacts">
+                    <div class="header__tel">
+                        <span class="tel__number">8 (495) 640-24-86</span><br />
+                        <span class="callback__button">mail@evroobsada.ru</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__social">
+                <img src="images/footer/whatsapp_logo.svg" alt="WA">
+                <img src="images/footer/telegram_logo.svg" alt="TG">
+                <img src="images/footer/vk_logo.svg" alt="VK">
+            </div>
+        </div>
+    </footer>
+    <div class="overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="close-btn" id="closeModal">
+                <img src="/images/callback/close_btn.svg" alt="Закрыть">
+            </button>
+            <h2>Обратный звонок</h2>
+            <form method="post" action="">
+                <input type="hidden" name="PARAMS_HASH" value="">
+
+                <div class="input__wrapper">
+                    <div class="input__wrapper-background">
+                        <input class="modal__input-name" type="text" name="user_name" placeholder="Ваши ФИО" value="" required>
+                    </div>
+                    <div class="input__wrapper-background">
+                        <input class="modal__input-phone" type="tel" name="user_phone" placeholder="Телефон" value="" required>
+                    </div>
+                </div>
+
+                <div class="checkbox__wrapper">
+                    <input type="checkbox" id="consent" name="policy_checkbox" value="Y" required>
+                    <label for="consent">Принимаю политику конфиденциальности</label>
+                </div>
+
+                <button class="modal__submit" type="submit" name="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>    

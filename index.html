@@ -8,6 +8,7 @@
     <title>Euro Obsada</title>
     <script src="js/partners_slider.js" type="module" defer></script>
     <script src="js/news_slider.js" type="module" defer></script>
+    <script src="js/callback_form.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
@@ -20,7 +21,7 @@
                     </div>
                     <div class="header__tel">
                         <span class="tel__number">8 (495) 640-24-86</span><br />
-                        <span class="callback__button">Обратный звонок</span>
+                        <button class="callback__button" id="openModal">Обратный звонок</button>
                     </div>
                 </div>
                 <div class="header__item header__item-search">
@@ -54,7 +55,7 @@
     </header>
     <main>
         <div class="banner">
-            <div class="banner__titileblock">
+            <div class="banner__titleblock">
                 <span class="banner__subtitle uppercase">обсада, окна, двери, наличники</span>
                 <span class="banner__title">комплексное остекление деревянных домов</span>
             </div>
@@ -138,35 +139,35 @@
             <div class="partners__wrapper partners__wrapper-items" id="partners_sliderContainer">
                 <div class="partners__sliderTrack" id="partners_sliderTrack">
                     <div class="partners__item">
-                        <div class="partners__img"><img src="images/partners/illbruck_unselected.svg" alt="Illbruck"></div>
+                        <div class="partners__img"><img src="images/partners/illbruk.png" alt="Illbruck"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                     <div class="partners__item">
-                        <div class="partners__img"><img src="images/partners/veka_unselected.svg" alt="Veka"></div>
+                        <div class="partners__img"><img src="images/partners/veka_selected.png" alt="Veka"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                     <div class="partners__item">
-                        <div class="partners__img rehau"><img src="images/partners/rehau_unselected.svg" alt="Rehau"></div>
+                        <div class="partners__img rehau"><img src="images/partners/rehau_selected.png" alt="Rehau"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                     <div class="partners__item">
-                        <div class="partners__img"><img src="images/partners/remmers_unselected.svg" alt="Remmers"></div>
+                        <div class="partners__img"><img src="images/partners/remmers_selected.png" alt="Remmers"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                     <div class="partners__item">
-                        <div class="partners__img"><img src="images/partners/illbruck_unselected.svg" alt="Illbruck"></div>
+                        <div class="partners__img"><img src="images/partners/illbruk.png" alt="Illbruck"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                     <div class="partners__item">
-                        <div class="partners__img"><img src="images/partners/veka_unselected.svg" alt="Veka"></div>
+                        <div class="partners__img"><img src="images/partners/veka_selected.png" alt="Veka"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                     <div class="partners__item">
-                        <div class="partners__img rehau"><img src="images/partners/rehau_unselected.svg" alt="Rehau"></div>
+                        <div class="partners__img rehau"><img src="images/partners/rehau_selected.png" alt="Rehau"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                     <div class="partners__item">
-                        <div class="partners__img"><img src="images/partners/remmers_unselected.svg" alt="Remmers"></div>
+                        <div class="partners__img"><img src="images/partners/remmers_selected.png" alt="Remmers"></div>
                         <div class="partners__descr"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</span></div>
                     </div>
                 </div>
@@ -315,5 +316,33 @@
             </div>
         </div>
     </footer>
+    <div class="overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="close-btn" id="closeModal">
+                <img src="/images/callback/close_btn.svg" alt="Закрыть">
+            </button>
+            <h2>Обратный звонок</h2>
+            <form method="post" action="">
+                <input type="hidden" name="PARAMS_HASH" value="">
+
+                <div class="input__wrapper">
+                    <div class="input__wrapper-background">
+                        <input class="modal__input-name" type="text" name="user_name" placeholder="Ваши ФИО" value="" required>
+                    </div>
+                    <div class="input__wrapper-background">
+                        <input class="modal__input-phone" type="tel" name="user_phone" placeholder="Телефон" value="" required>
+                    </div>
+                </div>
+
+                <div class="checkbox__wrapper">
+                    <input type="checkbox" id="consent" name="policy_checkbox" value="Y" required>
+                    <label for="consent">Принимаю политику конфиденциальности</label>
+                </div>
+
+                <button class="modal__submit" type="submit" name="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -1,4 +1,3 @@
-/* Обнуление отступов и границ */
 *,
 *::before,
 *::after {
@@ -7,7 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Убираем обводку и стили у ссылок и кнопок */
 a {
   text-decoration: none;
   color: inherit;
@@ -21,7 +19,6 @@ button {
   cursor: pointer;
 }
 
-/* Наследование шрифта и сброс списков */
 ul, ol {
   list-style: none;
 }
@@ -35,45 +32,39 @@ body {
   overflow-x: hidden;
 }
 
-/* Сброс таблиц */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* HTML5 элементы */
 article, aside, footer, header, nav, section, main {
   display: block;
 }
 
-/* Atyp Text Regular */
 @font-face {
   font-family: 'Atyp Text Regular';
-  src: url(/fonts/AtypTextRegular/atyptext-regular.woff2) format('woff2');
+  src: url(fonts/AtypTextRegular/atyptext-regular.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
-/* Atyp Text SemiBold */
 @font-face {
   font-family: 'Atyp Text SemiBold';
-  src: url(/fonts/AtypTextSemiBold/atyptext-semibold.woff2) format('woff2');
+  src: url(fonts/AtypTextSemiBold/atyptext-semibold.woff2) format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
-/* Atyp Text Bold */
 @font-face {
   font-family: 'Atyp Text Bold';
-  src: url(/fonts/AtypTextBold/atyptext-bold.woff2) format('woff2');
+  src: url(fonts/AtypTextBold/atyptext-bold.woff2) format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
-/* BebasNeue Bold */
 @font-face {
   font-family: 'BebasNeue';
-  src: url(/fonts/BebasNeueBold/bebas_neue_bold.woff2) format('woff2');
+  src: url(fonts/BebasNeueBold/bebas_neue_bold.woff2) format('woff2');
   font-weight: 700;
   font-style: normal;
 }
@@ -83,20 +74,25 @@ article, aside, footer, header, nav, section, main {
   line-height: 1;
 }
 
-.header__item {
-  display: flex;
-  padding: 20px 0;
-}
-
 .flex-spcbtw {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* header */
+
+.header__item {
+  display: flex;
+  padding: 20px 0;
+}
+
 .header__transperency {
-  /*background-image: url(images/header/header__transperency.png);*/
   background-color: #1e1e1e99;
+}
+
+.header__solid {
+  background-color: #1e1e1e;
 }
 
 .contentBox {
@@ -111,6 +107,11 @@ article, aside, footer, header, nav, section, main {
   color: #ffffff;
 }
 
+.header__work-time span:last-child {
+  display: inline-block;
+  margin-top: 10px;
+}
+
 .tel__number {
   font-family: 'Atyp Text SemiBold';
   font-size: 20px;
@@ -120,6 +121,7 @@ article, aside, footer, header, nav, section, main {
 .callback__button {
   font-family: 'Atyp Text Regular';
   font-size: 14px;
+  line-height: 1.5;
   color: #669933;
 }
 
@@ -134,7 +136,7 @@ article, aside, footer, header, nav, section, main {
   font-family: 'Atyp Text Regular';
   font-size: 14px;
   color: #ffffff;
-  background-image: url(images/header/login_icon.png);
+  background-image: url(/images/header/login_icon.png);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right center;
@@ -148,7 +150,7 @@ article, aside, footer, header, nav, section, main {
   margin-right: 130px;
   width: 280px;
   height: 40px;
-  background-image: url(images/header/search_input.png);
+  background-image: url(/images/header/search_input.png);
   background-repeat: no-repeat;
   background-position: 50% 100%;
 }
@@ -158,11 +160,10 @@ article, aside, footer, header, nav, section, main {
   width: 260px;
   height: 40px;
   border: none;
-  /*outline: 1px solid white;*/
   box-shadow: none;
   background-color: transparent;
   color: #ffffff;
-  background-image: url(images/header/search_icon.png);
+  background-image: url(/images/header/search_icon.png);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right center;
@@ -179,6 +180,8 @@ article, aside, footer, header, nav, section, main {
   outline: none;
   background-image: none;
 }
+
+/* top-menu */
 
 .header__navigation {
   position: relative;
@@ -207,16 +210,21 @@ article, aside, footer, header, nav, section, main {
 }
 
 .navigation__item {
+  position: relative;
   font-family: 'Atyp Text SemiBold';
   font-size: 14px;
   color: #ffffff;
 }
 
+.navigation__item:hover {
+  color: #669933;
+}
+
 .navigation__items .logo-placeholder {
   width: 180px;
   pointer-events: none;
-  display: ;
   margin-left: 40px;
+  opacity: 0;
 }
 
 .navigation__item:not(.logo-placeholder):not(:last-child) {
@@ -236,6 +244,44 @@ article, aside, footer, header, nav, section, main {
   height: auto;
 }
 
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #1e1e1e99;
+    border-bottom: 1px solid #cc9966;
+    z-index: 100;
+    min-width: 180px; /* ширина подменю */
+}
+
+
+.navigation__item:hover > .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    display: block;
+    padding: 8px 20px;
+    color: #ffffff;
+    font-family: 'Atyp Text SemiBold';
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    color: #669933;
+}
+
+/* banner */
+
 .banner {
   position: relative;
   z-index: -2;
@@ -243,11 +289,11 @@ article, aside, footer, header, nav, section, main {
   flex-direction: column;
   background-image: url(/images/banner/banner_background.png);
   background-repeat: no-repeat;
-  padding-top: 176px;
-  margin-top: -176px;
+  padding-top: 180px;
+  margin-top: -172px;
 }
 
-.banner__titileblock {
+.banner__titleblock {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,7 +301,7 @@ article, aside, footer, header, nav, section, main {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 180px;
-  background-image: url(images/banner/banner_title_block.png);
+  background-image: url(/images/banner/banner_title_block.png);
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -321,17 +367,17 @@ article, aside, footer, header, nav, section, main {
   border-right: 1px solid black;
 }
 
+/* companydescr */
+
 .companydescr {
   display: flex;
 }
-
-
 
 .companydescr__leftblock {
   flex: 0 0 50%;
   padding-left: 260px;
   padding-right: 90px;
-  background-image: url(images/homedescr/homeDescrTitleImage.png);
+  background-image: url(/images/homedescr/homeDescrTitleImage.png);
   background-repeat: no-repeat;
 }
 
@@ -369,6 +415,8 @@ article, aside, footer, header, nav, section, main {
   font-family: 'Atyp Text Regular';
   font-size: 20px;
 }
+
+/* services */
 
 .services {
   margin-bottom: 100px;
@@ -491,7 +539,7 @@ article, aside, footer, header, nav, section, main {
   line-height: 1.5;
 }
 
-/**************************************/
+/* partners */
 
 .partners {
   margin-bottom: 100px;
@@ -508,7 +556,7 @@ article, aside, footer, header, nav, section, main {
   padding: 0 120px;
   font-family: 'Bebas Neue';
   font-size: 64px;
-  background-image: url(images/partners/title_backgroun.png);
+  background-image: url(/images/partners/title_backgroun.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -532,7 +580,7 @@ article, aside, footer, header, nav, section, main {
   gap: 45px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* скрыть стандартный скролл Firefox */
+  scrollbar-width: none;
   scroll-snap-type: x mandatory;
 }
 
@@ -559,6 +607,14 @@ article, aside, footer, header, nav, section, main {
   transition: max-height 0.3s ease;
 }
 
+.partners__item .partners__img {
+  opacity: 0.4;
+}
+
+.partners__item:hover .partners__img {
+  opacity: 1;
+}
+
 .partners__item:hover {
   position: relative;
   max-height: 400px;
@@ -568,10 +624,6 @@ article, aside, footer, header, nav, section, main {
 
 .partners__item:hover .partners__descr span {
   max-height: 180px;
-}
-
-.partners__item:hover .rehau img {
-  content: url(images/partners/rehau_selected.svg);
 }
 
 .partners__img {
@@ -617,7 +669,7 @@ article, aside, footer, header, nav, section, main {
   cursor: default;
 }
 
-/**************************************/
+/* news */
 
 .news {
   margin-bottom: 100px;
@@ -665,7 +717,7 @@ article, aside, footer, header, nav, section, main {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* скрыть стандартный скролл Firefox */
+  scrollbar-width: none;
   scroll-snap-type: x mandatory;
 }
 
@@ -704,12 +756,12 @@ article, aside, footer, header, nav, section, main {
 }
 
 .news__item:hover .news__img img {
-  filter: brightness(70%); /* затемнение до 70% яркости */
+  filter: brightness(70%);
 }
 
 .news__item:hover .news__details {
   opacity: 1;
-  pointer-events: auto; /* теперь кнопка кликабельна */
+  pointer-events: auto;
 }
 
 .news__date {
@@ -759,10 +811,11 @@ article, aside, footer, header, nav, section, main {
   cursor: default;
 }
 
-/**************************************/
+/* footer */
 
 .footer {
   display: flex;
+  width: 100%;
 }
 
 .footer__logo {
@@ -773,11 +826,27 @@ article, aside, footer, header, nav, section, main {
 }
 
 .footer__wrapper {
-  display: grid;
-  grid-template-columns: minmax(0, 260px) minmax(0, 1400px) minmax(0, 260px);
+  width: 100%;
+  display: flex;
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: #1e1e1e;
+}
+
+.footer__logo-placeholder {
+flex: 0 1 249px;
+}
+
+.footer__nav {
+flex: 0 1 1400px;
+}
+
+.footer__social {
+flex: 0 1 249px;
+}
+
+.footer__social :not(:last-child) {
+  margin-right: 20px;
 }
 
 .footer__nav {
@@ -788,15 +857,464 @@ article, aside, footer, header, nav, section, main {
   display: flex;
   margin-right: 90px;
   padding-left: 20px;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 50px);
   font-family: 'Atyp Text SemiBold';
   font-size: 14px;
   color: #ffffff;
 }
 
-.footer__menu :not(:last-child) {
-  margin-right: 50px;
+.footer__menu a:hover {
+  color: #669933;
 }
 
-.footer__social :not(:last-child) {
+/* callback popup */
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  background: #1e1e1e;
+  min-width: 740px;
+  max-width: 740px;
+  width: 100%;
+  background-image: url(/images/callback/callback_background.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal h2 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 46px;
+  text-align: center;
+  color: #666666;
+  background-image: url(/images/callback/header_background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal form {
+  text-align: center;
+}
+
+.input__wrapper .input__wrapper-background {
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  max-width: 387px;
+  width: 100%;
+}
+
+.input__wrapper-background {
+  background-image: url(/images/callback/input_img.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.modal__input-name {
+  background-image: url(/images/callback/name_img.png);
+}
+
+.modal__input-phone {
+  background-image: url(/images/callback/tel_image.png);
+}
+
+.modal__input-name,
+.modal__input-phone {
+  display: inline-block;
+  padding: 15px 0 15px 70px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 20px;
+}
+
+.modal__input-name::placeholder {
+  font-family: 'Atyp Text Regular';
+  font-size: 14px;
+  color: #ffffff;
+  height: auto;
+}
+
+.modal__input-phone::placeholder {
+  font-family: 'Atyp Text Regular';
+  font-size: 14px;
+  color: #ffffff;
+  height: auto;
+}
+
+.modal__input-name,
+.modal__input-phone:focus {
+  outline: none;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.checkbox__wrapper input {
+  margin-right: 25px;
+}
+
+.checkbox__wrapper input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 24px;
+  height: 24px;
+
+  border: 1px solid #999999;
+  background: transparent;
+  cursor: pointer;
+
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox__wrapper input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #339933;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox__wrapper label {
+  font-family: 'Atyp Text Regular', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.modal__submit {
+  margin-bottom: 60px;
+  padding: 20px 30px;
+  font-family: 'Atyp Text', sans-serif;
+  font-size: 20px;
+  color: #339933;
+  background-color: #1e1e1e;
+  border: 1px solid #444444;
+}
+
+/*                                  CATALOG PAGE                                 */
+.catalog {
+  background-image: url(images/catalog/catalog__background.png);
+  background-repeat: repeat-y;
+}
+
+.breadcrump {
+  padding-top: 20px;
+  margin-bottom: 80px;
+}
+
+.catalog__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-right: 100px;
+  font-family: BebasNeue, sans-serif;
+  font-size: 64px;
+  margin-bottom: 90px;
+  letter-spacing: 0.06em;
+}
+
+.catalog_block {
+  display: flex;
+  box-sizing: border-box;
+  background-color: #F9F9F999;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 230px;
+  padding-right: 230px;
+}
+
+.catalog__filters {
+  margin-right: 45px;
+  display: flex;
+  flex: 0 0 315px;
+  flex-direction: column;
+}
+
+.filters__block {
+  padding-bottom: 17px;
+}
+
+.filters__block label {
+  font-family: "BebasNeue", sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.06em;
+}
+
+.filter__checkbox {
+  font-family: "Atyp Text Regular", sans-serif;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.filter__checkbox label {
+  font-family: "Atyp Text Regular";
+}
+
+.filter__checkbox input[type="checkbox"] {
+  margin-right: 18px;
+  appearance: none;           /* убираем системный стиль */
+  -webkit-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #cccccc;  /* рамка */
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.filter__checkbox input[type="checkbox"]:checked {
+  background-color: #fff;
+  border-color: #cccccc;
+}
+
+.filter__checkbox input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #339933;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.catalog__items {
+  width: 100%;
+}
+
+.filters__block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.filters__block:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
+}
+
+.filters__block label {
+  margin-bottom: 25px;
+}
+
+.price__filter input {
+  max-width: 120px;
+  height: 45px;
+  padding-left: 45px;
+}
+
+.input__wrapper-price {
+  position: relative;
+  display: inline-block;
+}
+
+.input__wrapper-price input {
+  border: 1px solid #cccccc;
+}
+
+.fakePlaceholder {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+
+.price__filter input:not(:last-child) {
   margin-right: 20px;
+}
+
+.filtres__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons__apply {
+  font-family: "Atyp Text SemiBold", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  padding: 18px 30px;
+  color: #339933;
+  border: 1px solid #cccccc;
+  margin-right: 35px;
+}
+
+.buttons__apply:hover {
+  border: 1px solid #339933;
+}
+
+.catalog__sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  align-items: center;
+}
+
+.sort__price span {
+  font-family: "Atyp Text Regular";
+  font-size: 16px;
+  color: #828282;
+  margin-right: 25px;
+}
+
+.sort__quantity span {
+  font-family: "Atyp Text Regular";
+  font-size: 16px;
+  color: #828282;
+  margin-right: 10px;  
+}
+
+.sort__quantity select {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+  gap: 45px;
+  margin-bottom: 50px;
+}
+
+.catalog__prduct {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8e8e8;
+  position: relative;
+  align-items: center;
+}
+
+.catalog__prduct:hover {
+  border: 1px solid #a4e490;
+}
+
+.product__hit {
+  position: absolute;
+  right: 12px;
+  top: -12px;
+  display: block;
+}
+
+.product__descr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 285px;
+  width: 100%;
+  text-align: center;
+}
+
+.product__descr img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.product__descr span {
+  display: block;
+  margin-bottom: 25px;
+  max-width: 265px;
+  font-family: "Atyp Text SemiBold";
+  font-size: 16px;
+}
+
+.product__descr {
+  text-transform: uppercase;
+}
+
+.product__price {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f6f6f6;
+  font-family: "Atyp Text SemiBold";
+  color: #339933;
+}
+
+.descr {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.descr__wrapper {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.descr__title {
+  flex: 0 0 315px;
+  margin-right: 45px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  letter-spacing: 0.06em;
+}
+
+.descr__text {
+  width: 100%;
+  font-family: "Atyp Text Regular", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.decr__images {
+  display: flex;
+  justify-content: space-between;
 }
